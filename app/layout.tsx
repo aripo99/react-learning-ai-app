@@ -1,11 +1,15 @@
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'
+import { use } from 'react';
 import Providers from "@/components/Providers";
+import AuthChangeListener from '@/components/AuthChangeListener';
+import UserSessionProvider from "@/components/UserSessionProvider";
+import loadSession from "@/lib/load-session";
 
 const inter = Inter({ subsets: ['latin'] })
 
-export const runtime = 'edge';
+// export const runtime = 'edge';
 
 // this is needed to force dynamic runtime
 export const dynamic = 'force-dynamic';
@@ -21,10 +25,16 @@ export default function RootLayout({
 }: {
   children: React.ReactNode
 }) {
+  const session = use(loadSession());
+
   return (
     <html lang="en" className='dark'>
       <body className={inter.className}>
-        <Providers>{children}</Providers>
+        <AuthChangeListener session={session}>
+          <UserSessionProvider session={session}>
+            <Providers>{children}</Providers>
+          </UserSessionProvider>
+        </AuthChangeListener>
       </body>
     </html>
   )

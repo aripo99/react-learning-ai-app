@@ -13,5 +13,5 @@ export async function GET(request: NextRequest) {
         await client.auth.exchangeCodeForSession(code);
     }
 
-    return redirect('/dashboard')
+    return redirect('/lecture')
 }

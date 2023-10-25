@@ -32,7 +32,7 @@ function EmailPasswordSignInForm() {
             });
 
             // we redirect the user to the dashboard on success
-            router.push('/dashboard');
+            router.push('/lecture');
         };
 
     return (

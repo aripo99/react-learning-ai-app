@@ -31,6 +31,6 @@ async function assertUserIsSignedOut() {
     // If session is not null, the user is logged in
     // `redirect` will throw an error that will be handled by Next.js
     if (session) {
-        redirect('/dashboard');
+        redirect('/lecture');
     }
 }

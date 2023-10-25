@@ -1,9 +1,8 @@
 'use client';
 
 import { useMemo } from 'react';
-import Link from 'next/link';
 import { Session } from '@supabase/supabase-js';
-import { LogOut, LayoutDashboard, UserIcon } from 'lucide-react';
+import { LogOut, UserIcon } from 'lucide-react';
 
 import { Avatar, AvatarFallback } from './ui/avatar';
 import { DropdownMenu, DropdownMenuContent, DropdownMenuGroup, DropdownMenuItem, DropdownMenuLabel, DropdownMenuSeparator, DropdownMenuTrigger } from './ui/dropdown-menu';

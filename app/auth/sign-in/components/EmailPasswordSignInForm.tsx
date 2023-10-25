@@ -31,7 +31,7 @@ function EmailPasswordSignInForm() {
                 password,
             });
 
-            // we redirect the user to the dashboard on success
+            // we redirect the user to the lecture on success
             router.push('/lecture');
         };
 

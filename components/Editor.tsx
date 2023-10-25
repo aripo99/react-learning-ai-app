@@ -1,7 +1,11 @@
 "use client";
-
-import MonacoEditor from 'react-monaco-editor';
+import dynamic from "next/dynamic";
 import { editor } from 'monaco-editor';
+
+const MonacoEditor = dynamic(
+    () => import("react-monaco-editor"),
+    { ssr: false }
+);
 
 const EditorComponent = () => {
     const options: editor.IEditorOptions = {

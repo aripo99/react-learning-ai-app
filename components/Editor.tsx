@@ -1,27 +1,26 @@
 "use client";
-import dynamic from "next/dynamic";
+
 import { editor } from 'monaco-editor';
+import Editor from '@monaco-editor/react';
 
-const MonacoEditor = dynamic(
-    () => import("react-monaco-editor"),
-    { ssr: false }
-);
-
-const EditorComponent = () => {
+const EditorComponent: React.FC = () => {
     const options: editor.IEditorOptions = {
-        selectOnLineNumbers: true
+        selectOnLineNumbers: true,
+        minimap: { enabled: false },
     };
+
     return (
         <div className="h-1/2">
-            <MonacoEditor
-                language="javascript"
-                options={options}
+            <Editor
+                height="50vh" // By default, it fully fits with its parent
                 theme="vs-dark"
-                width="100%"
-                height="100%"
+                language="javascript"
+                value={'function add(a) {\n  return a + a;\n}'}
+                options={options}
             />
         </div>
     );
-}
+};
+
 
 export default EditorComponent;

@@ -7,7 +7,7 @@ function AppHeader() {
             <div className='flex items-center space-x-8'>
                 <ul className='flex space-x-3'>
                     <NavLink href='/lecture'>
-                        Lecture
+                        Learn React
                     </NavLink>
                 </ul>
             </div>

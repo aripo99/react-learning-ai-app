@@ -10,15 +10,14 @@ const EditorComponent: React.FC = () => {
     };
 
     return (
-        <div className="h-1/2">
-            <Editor
-                height="50vh" // By default, it fully fits with its parent
-                theme="vs-dark"
-                language="javascript"
-                value={'function add(a) {\n  return a + a;\n}'}
-                options={options}
-            />
-        </div>
+        <Editor
+            // height="100%"
+            theme="vs-dark"
+            language="javascript"
+            value={'function add(a) {\n  return a + a;\n}'}
+            options={options}
+        />
+
     );
 };
 

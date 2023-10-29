@@ -48,7 +48,7 @@ Components are the building blocks of any React application. A component defines
 
 const Content = () => {
     return (
-        <div className="h-1/2">
+        <div className="overflow-y-auto">
             <ReactMarkdown className="markdown">
                 {content}
             </ReactMarkdown>

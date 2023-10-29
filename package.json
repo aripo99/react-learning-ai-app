@@ -13,6 +13,8 @@
     "typegen": "supabase gen types typescript --local > database.types.ts"
   },
   "dependencies": {
+    "@babel/preset-react": "^7.22.15",
+    "@babel/standalone": "^7.23.2",
     "@monaco-editor/react": "^4.6.0",
     "@radix-ui/react-avatar": "^1.0.4",
     "@radix-ui/react-dropdown-menu": "^2.0.6",
